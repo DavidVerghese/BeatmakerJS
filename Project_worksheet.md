@@ -10,7 +10,7 @@ I want to create a website that allows users to make beats by clicking beats. I 
 
 Figma: https://www.figma.com/file/zFpw2o5PSd8oelKHyXhm35/Untitled?node-id=0%3A1
 
-<img width="836" alt="Screen Shot 2021-12-25 at 10 59 22 PM" src="https://user-images.githubusercontent.com/72947224/147398523-a847a7ca-96c1-4cde-99bd-6c2747683d2e.png">
+<img width="838" alt="Screen Shot 2021-12-25 at 11 04 08 PM" src="https://user-images.githubusercontent.com/72947224/147398565-d0d0ef83-1e14-4094-9f72-0f32ee0df9ff.png">
 
 
 ### MVP/PostMVP
