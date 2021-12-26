@@ -36,7 +36,7 @@ PostMVP
 |December 29| Setup backend
 |December 30-31| Create music player
 |January 1-2| Create signup/signin page and posts
-|January 3| Finish touches
+|January 3| Write Readme with instructions on how to setup application
 
 ## Code Snippet
 
