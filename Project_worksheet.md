@@ -8,6 +8,7 @@ I want to create a website that allows users to make beats by clicking beats. I 
 
 ## Wireframes
 
+<img width="836" alt="Screen Shot 2021-12-25 at 10 59 22 PM" src="https://user-images.githubusercontent.com/72947224/147398523-a847a7ca-96c1-4cde-99bd-6c2747683d2e.png">
 
 
 ### MVP/PostMVP
