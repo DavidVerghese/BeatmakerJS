@@ -17,25 +17,25 @@ Figma: https://www.figma.com/file/zFpw2o5PSd8oelKHyXhm35/Untitled?node-id=0%3A1
 
 MVP 
 
-- Ruby on Rails Authentication
-- Posts 
 - Userface that allows users to make beats by clicking boxes  
 - Different sounds: drums, bass, etc 
 - A screen for mobile saying it’s not available 
 
 PostMVP 
 
+- Ruby on Rails Authentication
+- Posts 
 - A mobile version 
 
 ## Project Schedule
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|December 26| Wireframes
-|December 27-28| Research Ruby on Rails Authentication
-|December 29| Setup backend
-|December 30-31| Create music player
-|January 1-2| Create signup/signin page and posts
+|December 27| Research how to create music player/ review old projects
+|December 28| Create music player interface
+|December 29| Research Ruby on Rails Authentication
+|December 30-31| Setup backend
+|January 1-2| Create signup/signin page and posts in frontend
 |January 3| Write Readme with instructions on how to setup application
 
 ## Code Snippet
