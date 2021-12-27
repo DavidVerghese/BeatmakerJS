@@ -4,7 +4,7 @@
 
 ## Project Description
 
-I want to create a website that allows users to make beats by clicking beats. I have previously worked on websites that do this, but have not deployed it. I also want to add authentication, so that users can sign in and leave comments. 
+I want to create a website that allows users to make beats by clicking beats. I have previously worked on websites that do them, but have not deployed it. I also want to add authentication, so that users can sign in and leave comments. 
 
 ## Wireframes
 
@@ -17,34 +17,28 @@ Figma: https://www.figma.com/file/zFpw2o5PSd8oelKHyXhm35/Untitled?node-id=0%3A1
 
 MVP 
 
-- Ruby on Rails Authentication
-- Posts 
 - Userface that allows users to make beats by clicking boxes  
 - Different sounds: drums, bass, etc 
 - A screen for mobile saying it’s not available 
 
 PostMVP 
 
+- Ruby on Rails Authentication
+- Posts 
 - A mobile version 
 
 ## Project Schedule
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|December 27-28| Research Ruby on Rails Authentication
-|December 29| Setup backend
-|December 30-31| Create music player
-|January 1-2| Create signup/signin page and posts
-|January 3| Finish touches
+|December 27| Research how to create music player/ review old projects
+|December 28| Create music player interface, deploy frontend
+|December 29| Research Ruby on Rails Authentication
+|December 30| Setup backend
+|December 31 - January 1| Create signup/signin page and posts in frontend
+|January 2| Deploy backend 
+|January 3| Write Readme with instructions on how to setup application
 
 ## Code Snippet
-
-Use this section to include a brief code snippet of functionality that you are proud of and a brief description.  
-
-```
-function reverse(string) {
-	// here is the code to reverse a string of text
-}
-```
 
 ## Change Log
