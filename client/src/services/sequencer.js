@@ -1,63 +1,56 @@
 import * as Tone from 'tone'
 
-import kickFile from '../sounds/drums/kick.wav';
-import snareFile from '../sounds/drums/snare.wav';
-import hihatFile from '../sounds/drums/hihat.wav';
-import rimshotFile from '../sounds/drums/808rimshot.wav';
-import highTomFile from '../sounds/drums/808hightom.wav';
-import lowTomFile from '../sounds/drums/808lowtom.wav';
-import handclapFile from '../sounds/drums/808handclap.wav';
-import crashcymbalFile from '../sounds/drums/crash-cymbal.wav';
 
-export default function sequencer() {
+
+export default function sequencer(soundsArray,classNamesArray) {
   
   let index = 0;
-  const kick = new Tone.Player(kickFile).toDestination();
-  const snare = new Tone.Player(snareFile).toDestination();
-  const hihat = new Tone.Player(hihatFile).toDestination();
-  const rimshot = new Tone.Player(rimshotFile).toDestination();
-  const highTom = new Tone.Player(highTomFile).toDestination();
-  const lowTom = new Tone.Player(lowTomFile).toDestination();
-  const handclap = new Tone.Player(handclapFile).toDestination();
-  const crashcymbal = new Tone.Player(crashcymbalFile).toDestination();
+  const sound0 = new Tone.Player(soundsArray[0]).toDestination();
+  const sound1 = new Tone.Player(soundsArray[1]).toDestination();
+  const sound2 = new Tone.Player(soundsArray[2]).toDestination();
+  const sound3 = new Tone.Player(soundsArray[3]).toDestination();
+  const sound4 = new Tone.Player(soundsArray[4]).toDestination();
+  const sound5 = new Tone.Player(soundsArray[5]).toDestination();
+  const sound6 = new Tone.Player(soundsArray[6]).toDestination();
+  const sound7 = new Tone.Player(soundsArray[7]).toDestination();
 
   Tone.Transport.scheduleRepeat(repeat, '8n');
   Tone.Transport.start();
 
   function repeat() {
     let step = index % 8;
-    let kickInputs = document.querySelector(`.kick input:nth-child(${step + 1})`);
-    let snareInputs = document.querySelector(`.snare input:nth-child(${step + 1})`);
-    let hihatInputs = document.querySelector(`.hihat input:nth-child(${step + 1})`);
-    let rimshotInputs = document.querySelector(`.rimshot input:nth-child(${step + 1})`);
-    let highTomInputs = document.querySelector(`.hightom input:nth-child(${step + 1})`);
-    let lowTomInputs = document.querySelector(`.lowtom input:nth-child(${step + 1})`);
-    let handclapInputs = document.querySelector(`.handclap input:nth-child(${step + 1})`);
-    let crashcymbalInputs = document.querySelector(`.crashcymbal input:nth-child(${step + 1})`);
+    let zeroInputs = document.querySelector(`.${classNamesArray[0]} input:nth-child(${step + 1})`);
+    let oneInputs = document.querySelector(`.${classNamesArray[1]} input:nth-child(${step + 1})`);
+    let twoInputs = document.querySelector(`.${classNamesArray[2]} input:nth-child(${step + 1})`);
+    let threeInputs = document.querySelector(`.${classNamesArray[3]} input:nth-child(${step + 1})`);
+    let fourInputs = document.querySelector(`.${classNamesArray[4]} input:nth-child(${step + 1})`);
+    let fiveInputs = document.querySelector(`.${classNamesArray[5]} input:nth-child(${step + 1})`);
+    let sixInputs = document.querySelector(`.${classNamesArray[6]} input:nth-child(${step + 1})`);
+    let sevenInputs = document.querySelector(`.${classNamesArray[7]} input:nth-child(${step + 1})`);
 
-    if (kickInputs.checked) {
-      kick.start();
+    if (zeroInputs.checked) {
+      sound0.start();
     }
-    if (snareInputs.checked) {
-      snare.start();
+    if (oneInputs.checked) {
+      sound1.start();
     }
-    if (hihatInputs.checked) {
-      hihat.start();
+    if (twoInputs.checked) {
+      sound2.start();
     }
-    if (rimshotInputs.checked) {
-      rimshot.start();
+    if (threeInputs.checked) {
+      sound3.start();
     }
-    if (highTomInputs.checked) {
-      highTom.start();
+    if (fourInputs.checked) {
+      sound4.start();
     }
-    if (lowTomInputs.checked) {
-      lowTom.start();
+    if (fiveInputs.checked) {
+      sound5.start();
     }
-    if (handclapInputs.checked) {
-      handclap.start();
+    if (sixInputs.checked) {
+      sound6.start();
     }
-    if (crashcymbalInputs.checked) {
-      crashcymbal.start();
+    if (sevenInputs.checked) {
+      sound7.start();
     }
     index++;
   }
