@@ -4,7 +4,6 @@ import sequencer from './services/sequencer';
 import * as Tone from 'tone'
 import InputGrid from "./components/inputGrid"
 function App() {
-
   return (
     <div >
       <h1>Online Daw</h1>
