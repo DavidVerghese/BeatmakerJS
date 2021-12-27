@@ -1,5 +1,5 @@
 function inputGrid(props) {
-  return <div className={props.name}>
+  return <div className={props.className}>
   <input type="checkbox" />
   <input type="checkbox" />
   <input type="checkbox" />

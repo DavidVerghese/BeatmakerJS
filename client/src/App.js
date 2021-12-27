@@ -10,14 +10,14 @@ function App() {
       <h1>Online Daw</h1>
       <button onClick={ async () => { await Tone.start(); console.log("context started");  sequencer();}}>start</button>
       <div className="drums">
-        <InputGrid name={"kick"} />
-        <InputGrid name={"snare"} />
-        <InputGrid name={"hihat"} />
-        <InputGrid name={"rimshot"} />
-        <InputGrid name={"hightom"} />
-        <InputGrid name={"lowtom"} />
-        <InputGrid name={"handclap"} />
-        <InputGrid name={"crashcymbal"}/>
+        <InputGrid className={"kick"} />
+        <InputGrid className={"snare"} />
+        <InputGrid className={"hihat"} />
+        <InputGrid className={"rimshot"} />
+        <InputGrid className={"hightom"} />
+        <InputGrid className={"lowtom"} />
+        <InputGrid className={"handclap"} />
+        <InputGrid className={"crashcymbal"}/>
       </div>
     </div>
   );
