@@ -32,10 +32,11 @@ PostMVP
 |  Day | Deliverable | Status
 |---|---| ---|
 |December 27| Research how to create music player/ review old projects
-|December 28| Create music player interface
+|December 28| Create music player interface, deploy frontend
 |December 29| Research Ruby on Rails Authentication
-|December 30-31| Setup backend
-|January 1-2| Create signup/signin page and posts in frontend
+|December 30| Setup backend
+|December 31 - January 1| Create signup/signin page and posts in frontend
+|January 2| Deploy backend 
 |January 3| Write Readme with instructions on how to setup application
 
 ## Code Snippet
