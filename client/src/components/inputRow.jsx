@@ -1,5 +1,7 @@
+import './inputRow.css';
+
 function inputRow(props) {
-  return <div className={props.className}>
+  return (<div className="input-row"><p>{props.noteName}</p><div className={props.className}>
   <input type="checkbox" />
   <input type="checkbox" />
   <input type="checkbox" />
@@ -8,6 +10,6 @@ function inputRow(props) {
   <input type="checkbox" />
   <input type="checkbox" />
   <input type="checkbox" />
-</div>
+</div></div>)
 }
 export default inputRow;

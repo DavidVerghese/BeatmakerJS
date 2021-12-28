@@ -42,6 +42,9 @@ async function startSequencer() {
   sequencer(bassSoundsArray, 'bass');
   sequencer(violinSoundsArray, 'violin');
 }
+const noteNamesC1ToC2 = ["C1", "D2", "E2", "F2", "G2", "A2", "B2", "C2"];
+const noteNamesC4ToC5 = ["C4", "D4", "E4", "F4", "G4", "A4", "B4", "C5"];
+
 function App() {
   const [startButtonClicked, setStartButtonClicked] = useState(false);
   return (
@@ -49,11 +52,11 @@ function App() {
       <h1>Online Daw</h1>
       <button onClick={() => { if (!startButtonClicked) { startSequencer() };setStartButtonClicked(true)}}>start</button>
       <p>Drums</p>
-      <InputGrid className={"drums"}/>
+      <InputGrid noteNamesArray={noteNamesC1ToC2} className={"drums"}/>
       <p>Bass</p>
-      <InputGrid className={"bass"}/>
+      <InputGrid noteNamesArray={noteNamesC4ToC5} className={"bass"}/>
       <p>Violin</p>
-      <InputGrid className={"violin"}/>
+      <InputGrid noteNamesArray={noteNamesC4ToC5} className={"violin"}/>
     </div>
   );
 }
