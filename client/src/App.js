@@ -41,38 +41,11 @@ function App() {
       <h1>Online Daw</h1>
       <button onClick={async () => { await Tone.start(); sequencer(drumSoundsArray, 'drums'); sequencer(bassSoundsArray, 'bass');sequencer(violinSoundsArray,'violin')}}>start</button>
       <p>Drums</p>
-      <div className="drums">
-        <InputGrid className={"zero"} />
-        <InputGrid className={"one"} />
-        <InputGrid className={"two"} />
-        <InputGrid className={"three"} />
-        <InputGrid className={"four"} />
-        <InputGrid className={"five"} />
-        <InputGrid className={"six"} />
-        <InputGrid className={"seven"} />
-      </div>
+      <InputGrid className={"drums"}/>
       <p>Bass</p>
-      <div className="bass">
-        <InputGrid className={"zero"} />
-        <InputGrid className={"one"} />
-        <InputGrid className={"two"} />
-        <InputGrid className={"three"} />
-        <InputGrid className={"four"} />
-        <InputGrid className={"five"} />
-        <InputGrid className={"six"} />
-        <InputGrid className={"seven"} />
-      </div>
+      <InputGrid className={"bass"}/>
       <p>Violin</p>
-      <div className="violin">
-        <InputGrid className={"zero"} />
-        <InputGrid className={"one"} />
-        <InputGrid className={"two"} />
-        <InputGrid className={"three"} />
-        <InputGrid className={"four"} />
-        <InputGrid className={"five"} />
-        <InputGrid className={"six"} />
-        <InputGrid className={"seven"} />
-      </div>
+      <InputGrid className={"violin"}/>
     </div>
   );
 }
