@@ -3,6 +3,7 @@ import './App.css';
 import sequencer from './services/sequencer';
 import * as Tone from 'tone'
 import InputGrid from "./components/inputGrid"
+import { useState } from "react";
 
 import kickFile from './sounds/drums/kick.wav';
 import snareFile from './sounds/drums/snare.wav';
@@ -35,11 +36,18 @@ const drumSoundsArray = [kickFile, snareFile, hihatFile, rimshotFile, highTomFil
 const bassSoundsArray = [bassC2File,bassB1File,bassA1File,bassG1File,bassF1File,bassE1File,bassD1File,bassC1File];
 const violinSoundsArray = [violinC5File,violinB4File,violinA4File,violinG4File,violinF4File,violinE4File,violinD4File,violinC4File];
 
+async function startSequencer() {
+  await Tone.start();
+  sequencer(drumSoundsArray, 'drums');
+  sequencer(bassSoundsArray, 'bass');
+  sequencer(violinSoundsArray, 'violin');
+}
 function App() {
+  const [startButtonClicked, setStartButtonClicked] = useState(false);
   return (
     <div >
       <h1>Online Daw</h1>
-      <button onClick={async () => { await Tone.start(); sequencer(drumSoundsArray, 'drums'); sequencer(bassSoundsArray, 'bass');sequencer(violinSoundsArray,'violin')}}>start</button>
+      <button onClick={() => { if (!startButtonClicked) { startSequencer() };setStartButtonClicked(true)}}>start</button>
       <p>Drums</p>
       <InputGrid className={"drums"}/>
       <p>Bass</p>
