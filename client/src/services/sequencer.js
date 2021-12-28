@@ -2,7 +2,7 @@ import * as Tone from 'tone'
 
 
 
-export default function sequencer(soundsArray,classNamesArray) {
+export default function sequencer(soundsArray,className) {
   
   let index = 0;
   const sound0 = new Tone.Player(soundsArray[0]).toDestination();
@@ -19,14 +19,14 @@ export default function sequencer(soundsArray,classNamesArray) {
 
   function repeat() {
     let step = index % 8;
-    let zeroInputs = document.querySelector(`.${classNamesArray[0]} input:nth-child(${step + 1})`);
-    let oneInputs = document.querySelector(`.${classNamesArray[1]} input:nth-child(${step + 1})`);
-    let twoInputs = document.querySelector(`.${classNamesArray[2]} input:nth-child(${step + 1})`);
-    let threeInputs = document.querySelector(`.${classNamesArray[3]} input:nth-child(${step + 1})`);
-    let fourInputs = document.querySelector(`.${classNamesArray[4]} input:nth-child(${step + 1})`);
-    let fiveInputs = document.querySelector(`.${classNamesArray[5]} input:nth-child(${step + 1})`);
-    let sixInputs = document.querySelector(`.${classNamesArray[6]} input:nth-child(${step + 1})`);
-    let sevenInputs = document.querySelector(`.${classNamesArray[7]} input:nth-child(${step + 1})`);
+    let zeroInputs = document.querySelector(`.${className} .zero input:nth-child(${step + 1})`);
+    let oneInputs = document.querySelector(`.${className} .one input:nth-child(${step + 1})`);
+    let twoInputs = document.querySelector(`.${className} .two input:nth-child(${step + 1})`);
+    let threeInputs = document.querySelector(`.${className} .three input:nth-child(${step + 1})`);
+    let fourInputs = document.querySelector(`.${className} .four input:nth-child(${step + 1})`);
+    let fiveInputs = document.querySelector(`.${className} .five input:nth-child(${step + 1})`);
+    let sixInputs = document.querySelector(`.${className} .six input:nth-child(${step + 1})`);
+    let sevenInputs = document.querySelector(`.${className} .seven input:nth-child(${step + 1})`);
 
     if (zeroInputs.checked) {
       sound0.start();

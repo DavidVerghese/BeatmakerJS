@@ -35,43 +35,43 @@ const drumSoundsArray = [kickFile, snareFile, hihatFile, rimshotFile, highTomFil
 const bassSoundsArray = [bassC2File,bassB1File,bassA1File,bassG1File,bassF1File,bassE1File,bassD1File,bassC1File];
 const violinSoundsArray = [violinC5File,violinB4File,violinA4File,violinG4File,violinF4File,violinE4File,violinD4File,violinC4File];
 
-let classNamesArray = ['kick', 'snare', 'hihat', 'rimshot', 'hightom', 'lowtom', 'handclap', 'crashcymbal'];
-// let classNamesArray = ['drums 0', 'drums 1', 'drums 2', 'drums 3', 'drums 4', 'drums 5', 'drums 6', 'drums 7'];
-
 function App() {
   return (
     <div >
       <h1>Online Daw</h1>
-      <button onClick={ async () => { await Tone.start(); console.log("context started");  sequencer(drumSoundsArray,classNamesArray);}}>start</button>
+      <button onClick={async () => { await Tone.start(); sequencer(drumSoundsArray, 'drums'); sequencer(bassSoundsArray, 'bass');sequencer(violinSoundsArray,'violin')}}>start</button>
+      <p>Drums</p>
       <div className="drums">
-        <InputGrid className={"kick"} />
-        <InputGrid className={"snare"} />
-        <InputGrid className={"hihat"} />
-        <InputGrid className={"rimshot"} />
-        <InputGrid className={"hightom"} />
-        <InputGrid className={"lowtom"} />
-        <InputGrid className={"handclap"} />
-        <InputGrid className={"crashcymbal"} />
+        <InputGrid className={"zero"} />
+        <InputGrid className={"one"} />
+        <InputGrid className={"two"} />
+        <InputGrid className={"three"} />
+        <InputGrid className={"four"} />
+        <InputGrid className={"five"} />
+        <InputGrid className={"six"} />
+        <InputGrid className={"seven"} />
       </div>
+      <p>Bass</p>
       <div className="bass">
-        <InputGrid className={"0"} />
-        <InputGrid className={"1"} />
-        <InputGrid className={"2"} />
-        <InputGrid className={"3"} />
-        <InputGrid className={"4"} />
-        <InputGrid className={"5"} />
-        <InputGrid className={"6"} />
-        <InputGrid className={"7"} />
+        <InputGrid className={"zero"} />
+        <InputGrid className={"one"} />
+        <InputGrid className={"two"} />
+        <InputGrid className={"three"} />
+        <InputGrid className={"four"} />
+        <InputGrid className={"five"} />
+        <InputGrid className={"six"} />
+        <InputGrid className={"seven"} />
       </div>
+      <p>Violin</p>
       <div className="violin">
-        <InputGrid className={"kick"} />
-        <InputGrid className={"snare"} />
-        <InputGrid className={"hihat"} />
-        <InputGrid className={"rimshot"} />
-        <InputGrid className={"hightom"} />
-        <InputGrid className={"lowtom"} />
-        <InputGrid className={"handclap"} />
-        <InputGrid className={"crashcymbal"} />
+        <InputGrid className={"zero"} />
+        <InputGrid className={"one"} />
+        <InputGrid className={"two"} />
+        <InputGrid className={"three"} />
+        <InputGrid className={"four"} />
+        <InputGrid className={"five"} />
+        <InputGrid className={"six"} />
+        <InputGrid className={"seven"} />
       </div>
     </div>
   );
