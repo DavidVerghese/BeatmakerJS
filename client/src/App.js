@@ -4,7 +4,7 @@ import sequencer from './services/sequencer';
 import * as Tone from 'tone'
 import InputGrid from "./components/inputGrid"
 import { useState } from "react";
-
+import Footer from './components/Footer/Footer';
 import kickFile from './sounds/drums/kick.wav';
 import snareFile from './sounds/drums/snare.wav';
 import hihatFile from './sounds/drums/hihat.wav';
@@ -59,7 +59,7 @@ function App() {
       <h3>Violin</h3>
       <InputGrid noteNamesArray={noteNamesC4ToC5} instrument={"violin"}/>
       </div>
-      <footer><p>Github</p><p>LinkedIn</p><p>Portfolio</p></footer>
+      <Footer/>
     </div>
   );
 }

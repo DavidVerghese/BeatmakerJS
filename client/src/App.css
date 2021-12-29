@@ -2,14 +2,18 @@ body {
   background-color: black;
   color: white;
 }
+a {
+  color: white;
+}
 button {
   height: 30px;
 }
-header, footer {
+header {
   display: flex;
   justify-content: space-around;
   width: 100%;
 }
+
 .app {
   display: flex;
   flex-direction: column;
