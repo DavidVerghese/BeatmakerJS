@@ -1,5 +1,7 @@
 import * as Tone from 'tone'
 
+// based on this tutorial: https://www.youtube.com/watch?v=8T4SCksjrQ4
+
 export default function sequencer(soundsArray,className) {
   
   let index = 0;
