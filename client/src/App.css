@@ -8,11 +8,7 @@ a {
 button {
   height: 30px;
 }
-header {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-}
+
 
 .app {
   display: flex;
