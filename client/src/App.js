@@ -2,7 +2,7 @@
 import './App.css';
 import sequencer from './services/sequencer';
 import * as Tone from 'tone'
-import InputGrid from "./components/inputGrid"
+import InputGrid from "./components/InputGrid/InputGrid"
 import { useState } from "react";
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';

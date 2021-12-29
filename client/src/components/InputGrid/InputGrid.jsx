@@ -1,7 +1,7 @@
-import InputRow from './inputRow'
-import './inputGrid.css';
+import InputRow from '../InputRow/InputRow'
+import './InputGrid.css';
 
-function inputGrid(props) {
+function InputGrid(props) {
   return (<div className={props.instrument}>
     <InputRow color={"red-text"} noteName={props.noteNamesArray[0]} className={"zero"} />
   <InputRow color={"orange-text"} noteName={props.noteNamesArray[1]} className={"one"} />
@@ -13,4 +13,4 @@ function inputGrid(props) {
   <InputRow color={"white-text"} noteName={props.noteNamesArray[7]} className={"seven"} />
 </div>)
 }
-export default inputGrid;
+export default InputGrid;
