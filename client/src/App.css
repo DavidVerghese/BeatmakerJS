@@ -1,6 +1,7 @@
 body {
   background-color: black;
   color: white;
+  background-image: url('https://lh3.googleusercontent.com/proxy/3XcAC9d-Puz0L5kQQe-6sOn70yhmPPEOmQmh_XeiXBM465PwwWBu9gKcywBt-FIqvy3GcCT0in-AMar-QPaJ1RWOL0fTaysViD8ZnqnjuZJt8YRVrmErCxnW');
 }
 a {
   color: white;
@@ -20,6 +21,7 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: black;
 }
 .topbar {
   display: flex;
