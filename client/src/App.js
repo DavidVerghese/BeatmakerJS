@@ -42,21 +42,24 @@ async function startSequencer() {
   sequencer(bassSoundsArray, 'bass');
   sequencer(violinSoundsArray, 'violin');
 }
-const noteNamesC1ToC2 = ["C1", "D2", "E2", "F2", "G2", "A2", "B2", "C2"];
-const noteNamesC4ToC5 = ["C4", "D4", "E4", "F4", "G4", "A4", "B4", "C5"];
+const noteNamesC1ToC2 = ["C2", "B1", "A1", "G1", "F1", "E1", "D1", "C1"];
+const noteNamesC4ToC5 = ["C5", "B4", "A4", "G4", "F4", "E4", "D4", "C4"];
 
 function App() {
   const [startButtonClicked, setStartButtonClicked] = useState(false);
   return (
-    <div >
-      <h1>Online Daw</h1>
-      <button onClick={() => { if (!startButtonClicked) { startSequencer() };setStartButtonClicked(true)}}>start</button>
-      <p>Drums</p>
-      <InputGrid noteNamesArray={noteNamesC1ToC2} className={"drums"}/>
-      <p>Bass</p>
-      <InputGrid noteNamesArray={noteNamesC4ToC5} className={"bass"}/>
-      <p>Violin</p>
-      <InputGrid noteNamesArray={noteNamesC4ToC5} className={"violin"}/>
+    <div className="app">
+      <header><h1>Online Daw</h1><p>Sign In</p><p>Sign Up</p><p>Blog</p></header>
+      <div className="musicmaker">
+        <div className="topbar"><h2>How to Use This</h2><button onClick={() => { if (!startButtonClicked) { startSequencer() };setStartButtonClicked(true)}}>start</button> </div>
+      <h3>Drums</h3>
+      <InputGrid noteNamesArray={noteNamesC1ToC2} instrument={"drums"}/>
+      <h3>Bass</h3>
+      <InputGrid noteNamesArray={noteNamesC1ToC2} instrument={"bass"}/>
+      <h3>Violin</h3>
+      <InputGrid noteNamesArray={noteNamesC4ToC5} instrument={"violin"}/>
+      </div>
+      <footer><p>Github</p><p>LinkedIn</p><p>Portfolio</p></footer>
     </div>
   );
 }

@@ -1,5 +1,35 @@
 .input-row {
   display: flex;
-  background-color: black;
-  color: white;
+  margin: 10px 0px;
+}
+.input-row input {
+  margin: 10px 25px;
+}
+.red-text {
+  color: #ff2328;
+}
+.orange-text {
+  color: #ef9653;
+}
+.yellow-text {
+  color: #ddea89;
+}
+.green-text {
+  color: #21f0b6;
+}
+.blue-text {
+  color: #17d6f7f9;
+}
+.magenta-text {
+  color: #a244e4
+}
+.purple-text {
+  color: #949fde;
+}
+.white-text {
+  color: #9f9a9a;
+}
+.zero, .one, .two, .three, .four, .five, .six, .seven {
+  background-color: rgb(84, 3, 3);
+  margin: 10px 10px;
 }
