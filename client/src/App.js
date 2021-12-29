@@ -53,7 +53,8 @@ function App() {
      <Header/>
       <div className="musicmaker">
         <div className="topbar"><h2>How to Use This</h2><button onClick={() => { if (!startButtonClicked) { startSequencer() };setStartButtonClicked(true)}}>start</button> </div>
-      <h3>Drums</h3>
+        
+        <h3>Drums</h3>
       <InputGrid noteNamesArray={noteNamesC1ToC2} instrument={"drums"}/>
       <h3>Bass</h3>
       <InputGrid noteNamesArray={noteNamesC1ToC2} instrument={"bass"}/>
