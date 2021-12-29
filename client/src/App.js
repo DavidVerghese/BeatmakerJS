@@ -5,6 +5,7 @@ import * as Tone from 'tone'
 import InputGrid from "./components/inputGrid"
 import { useState } from "react";
 import Footer from './components/Footer/Footer';
+import Header from './components/Header/Header';
 import kickFile from './sounds/drums/kick.wav';
 import snareFile from './sounds/drums/snare.wav';
 import hihatFile from './sounds/drums/hihat.wav';
@@ -49,7 +50,7 @@ function App() {
   const [startButtonClicked, setStartButtonClicked] = useState(false);
   return (
     <div className="app">
-      <header><h1>Online Daw</h1><p>Sign In</p><p>Sign Up</p><p>Blog</p></header>
+     <Header/>
       <div className="musicmaker">
         <div className="topbar"><h2>How to Use This</h2><button onClick={() => { if (!startButtonClicked) { startSequencer() };setStartButtonClicked(true)}}>start</button> </div>
       <h3>Drums</h3>
