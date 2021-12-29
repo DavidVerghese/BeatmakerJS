@@ -1,13 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
 body {
   background-color: black;
-  color: white;
+  color: #a0ebf9f9;
+  font-family: 'Staatliches', cursive;
   background-image: url('https://lh3.googleusercontent.com/proxy/3XcAC9d-Puz0L5kQQe-6sOn70yhmPPEOmQmh_XeiXBM465PwwWBu9gKcywBt-FIqvy3GcCT0in-AMar-QPaJ1RWOL0fTaysViD8ZnqnjuZJt8YRVrmErCxnW');
 }
 a {
-  color: white;
+  color: #a0ebf9f9;
 }
 button {
   height: 30px;
+  font-family: 'Staatliches', cursive;
+  background-color: #a0ebf9f9;
 }
 
 
