@@ -1,0 +1,23 @@
+
+.youtube-modal {
+  background-color: black;
+  color: #a0ebf9f9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 30px auto;
+  padding: 20px;
+  min-width: 450px;
+  max-width: 600px;
+  width: 70%;
+}
+.youtube-modal button {
+  margin: 20px;
+}
+
+@media only screen and (max-width: 500px) {
+  .youtube-modal {
+    display: none;
+  }
+}
