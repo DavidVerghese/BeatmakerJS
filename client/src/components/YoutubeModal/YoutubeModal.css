@@ -14,6 +14,20 @@
 }
 .youtube-modal button {
   margin: 20px;
+  background-color: #e86142f9;
+  padding: 3px;
+}
+.modal-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+@media only screen and (max-height: 500px) {
+  .youtube-modal {
+    margin: 10px auto;
+    padding: 10px;
+  }
 }
 
 @media only screen and (max-width: 500px) {

@@ -4,15 +4,17 @@ body {
   background-color: black;
   color: #a0ebf9f9;
   font-family: 'Staatliches', cursive;
+  font-size: 20px;
   margin: 0px;
 }
 a {
   color: #a0ebf9f9;
 }
 button {
-  height: 30px;
+  height: 40px;
   font-family: 'Staatliches', cursive;
   background-color: #a0ebf9f9;
+  font-size: 110%;
 }
 
 
