@@ -51,10 +51,11 @@ const noteNamesC4ToC5 = ["C5", "B4", "A4", "G4", "F4", "E4", "D4", "C4"];
 function MusicMaker() {
   const [startButtonClicked, setStartButtonClicked] = useState(false);
   const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [refresh, setRefresh] = useState(false);
 
   if (startButtonClicked) {
     return (<div className="musicmaker">
-      <div className="topbar"><button onClick={() => setModalIsOpen(true)}>How to Use This</button></div>
+      <div className="topbar"><button onClick={() => setModalIsOpen(true)}>How to Use This</button><button onClick={() => { window.location.reload(false); }}>Stop</button></div>
       <YoutubeModal modalIsOpen={modalIsOpen} setModalIsOpen={setModalIsOpen} />
       <h3>Guitar</h3>
       <InputGrid noteNamesArray={noteNamesC4ToC5} instrument={"lead"} />
