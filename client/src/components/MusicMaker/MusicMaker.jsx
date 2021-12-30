@@ -52,17 +52,35 @@ function MusicMaker() {
   const [startButtonClicked, setStartButtonClicked] = useState(false);
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
-  return (    <div className="musicmaker">
-  <div className="topbar"><button onClick={()=> setModalIsOpen(true)}>How to Use This</button><button onClick={() => { if (!startButtonClicked) { startSequencer() };setStartButtonClicked(true)}}>start</button> </div>
-    <YoutubeModal modalIsOpen={modalIsOpen} setModalIsOpen={setModalIsOpen}/>
-    <h3>Guitar</h3>
-<InputGrid noteNamesArray={noteNamesC4ToC5} instrument={"lead"}/>
-  <h3>Bass</h3>
-  <InputGrid noteNamesArray={noteNamesC1ToC2} instrument={"bass"} />
-  <h3>Drums</h3>
-<InputGrid noteNamesArray={noteNamesC1ToC2} instrument={"drums"}/>
-
-
-</div>)
+  if (startButtonClicked) {
+    return (<div className="musicmaker">
+      <div className="topbar"><button onClick={() => setModalIsOpen(true)}>How to Use This</button></div>
+      <YoutubeModal modalIsOpen={modalIsOpen} setModalIsOpen={setModalIsOpen} />
+      <h3>Guitar</h3>
+      <InputGrid noteNamesArray={noteNamesC4ToC5} instrument={"lead"} />
+      <h3>Bass</h3>
+      <InputGrid noteNamesArray={noteNamesC1ToC2} instrument={"bass"} />
+      <h3>Drums</h3>
+      <InputGrid noteNamesArray={noteNamesC1ToC2} instrument={"drums"} />
+    </div>)
+  }
+  else {
+    return (<div className="home">
+      <h1>Ready to make music?</h1>
+      <div className="home-pics">
+        <div><img alt="vinyl record" src="https://media0.giphy.com/media/ZvaS4Aodq0BURmpLpA/giphy.gif?cid=ecf05e47wfx1ebbps4jpkzi2jk5hkuccy31m5c18zhuhdo8h&rid=giphy.gif&ct=g" /></div>
+        <div>   <img alt="playing bass" src="https://media3.giphy.com/media/26tk1hvtzWSRZlz5S/giphy.gif?cid=ecf05e4700r9r737r4uacrbtah0k65cs0v61akeh733pan5i&rid=giphy.gif&ct=g" /></div>
+        <div>    <img alt="playing guitar" src="https://media4.giphy.com/media/1QEAlV5yu62Ag/giphy.gif?cid=ecf05e4760xyudhok1k317cqpr70v9b72n9odpkvxod0hi0k&rid=giphy.gif&ct=g" /></div>
+        <div><img alt="playing drums" src="https://media4.giphy.com/media/IiwoJn6BPM4ww/giphy.gif?cid=ecf05e47d2zmpj4itqkba4b8mtc2eymrs6so75jgcwgv1kqq&rid=giphy.gif&ct=g" /></div>
+     
+    
+        
+      </div>
+      
+      <button onClick={() => { if (!startButtonClicked) { startSequencer() }; setStartButtonClicked(true) }}>Click to Enter</button>
+     
+    </div>)
+  }
 }
+  
 export default MusicMaker;
