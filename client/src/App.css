@@ -4,7 +4,7 @@ body {
   background-color: black;
   color: #a0ebf9f9;
   font-family: 'Staatliches', cursive;
-  background-image: url('../public/studio.jpg');
+  margin: 0px;
 }
 a {
   color: #a0ebf9f9;
@@ -36,4 +36,16 @@ button {
   padding: 20px 0px;
   /* padding: 20px;
   width: 100%; */
+}
+
+
+@media only screen and (min-width: 501px) {
+  body {
+    background-image: url('../public/studio.jpg');
+  }
+}
+@media only screen and (max-width: 500px) {
+  .musicmaker {
+    display: none;
+  }
 }

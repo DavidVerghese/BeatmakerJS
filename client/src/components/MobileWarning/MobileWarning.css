@@ -1,0 +1,15 @@
+.warning {
+  text-align: center;
+  padding: 20px;
+}
+.warning img {
+  width: 80%;
+  max-width: 300px;
+  -webkit-filter: grayscale(95%);
+  filter: grayscale(95%);
+}
+@media only screen and (min-width: 501px) {
+  .warning {
+    display: none;
+  }
+}
