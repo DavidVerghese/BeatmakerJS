@@ -33,7 +33,7 @@ import leadE4File from './sounds/pipa/pipa-e4.wav';
 import leadD4File from './sounds/pipa/pipa-d4.wav';
 import leadC4File from './sounds/pipa/pipa-c4.wav';
 
-const drumSoundsArray = [kickFile, snareFile, hihatFile, rimshotFile, highTomFile, lowTomFile, handclapFile, crashcymbalFile]
+const drumSoundsArray = [crashcymbalFile, handclapFile, lowTomFile, highTomFile, rimshotFile, hihatFile, snareFile, kickFile];
 const bassSoundsArray = [bassC2File,bassB1File,bassA1File,bassG1File,bassF1File,bassE1File,bassD1File,bassC1File];
 const leadSoundsArray = [leadC5File,leadB4File,leadA4File,leadG4File,leadF4File,leadE4File,leadD4File,leadC4File];
 
