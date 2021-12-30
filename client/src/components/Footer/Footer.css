@@ -11,11 +11,13 @@ footer img {
 footer div {
   display: flex;
   align-items: center;
-  margin: 5px 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 .footer-pic {
   width: 50px;
   height: 50px;
+  margin-right: 5px;
 }
 .footer-pic img {
   object-fit: fill;
@@ -23,9 +25,14 @@ footer div {
 .footer-linkedin-pic {
   width: 40px;
   height: 40px;
+  margin-right: 10px;
 }
 @media only screen and (max-width: 500px) {
   footer  {
     flex-direction: column;
+    justify-content: center;
+  }
+  footer div {
+    justify-content: center;
   }
 }
