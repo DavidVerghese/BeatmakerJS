@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+  before_action :authorize_request, except: [:index, :show]
   def index
     @comments = Comment.all
     render json: @comments
