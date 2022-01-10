@@ -8,7 +8,10 @@ class CommentsController < ApplicationController
     render json: @comment
   end
   def create
-    @comment = Comment.new(comment_params)
+    @user = User.find(comment_params[:user])
+    @post = Post.find(comment_params[:post])
+    @content = comment_params[:content]
+    @comment = Comment.new(content: @content,user:@user,post:@post)
 
     if @comment.save
       render json: @comment, status: :created
