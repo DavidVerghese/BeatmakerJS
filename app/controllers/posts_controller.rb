@@ -8,8 +8,9 @@ class PostsController < ApplicationController
     render json: @post
   end
   def create
-    @post = Post.new(post_params)
-
+    @user = User.find(post_params[:user])
+    @content = post_params[:content]
+    @post = Post.new(content: @content,user:@user)
     if @post.save
       render json: @post, status: :created
     else
@@ -29,7 +30,7 @@ class PostsController < ApplicationController
     def set_post
       @post = Post.find(params[:id])
     end
-    def post_params
+    def post_params 
       params.require(:post).permit(:content, :user)
-    end
+    end 
 end
