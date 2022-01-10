@@ -30,6 +30,6 @@ class CommentsController < ApplicationController
       @comment = Comment.find(params[:id])
     end
     def comment_params
-      params.require(:comment).permit(:name, :genre, :lifetime, :location)
+      params.require(:comment).permit(:content, :user,:post)
     end
 end
