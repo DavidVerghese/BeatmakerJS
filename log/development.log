@@ -110,3 +110,56 @@ Processing by UsersController#create as */*
 Completed 201 Created in 289ms (Views: 0.2ms | ActiveRecord: 8.6ms | Allocations: 10097)
 
 
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE DATABASE "backend_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE DATABASE "backend_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5073945470573576205)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (5.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5073945470573576205)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/comments" for ::1 at 2022-01-09 23:11:05 -0500
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CommentsController#index as HTML
+  [1m[36mComment Load (5.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:4:in `index'
+Completed 200 OK in 19ms (Views: 1.0ms | ActiveRecord: 5.5ms | Allocations: 4916)
+
+
+Started GET "/posts" for ::1 at 2022-01-09 23:11:08 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (3.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:4:in `index'
+Completed 200 OK in 10ms (Views: 3.3ms | ActiveRecord: 3.1ms | Allocations: 973)
+
+
+Started GET "/users" for ::1 at 2022-01-09 23:11:12 -0500
+Processing by UsersController#index as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 154)
+
+
+Started POST "/auth/login" for ::1 at 2022-01-09 23:17:40 -0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthenticationController#login as */*
+  Parameters: {"username"=>"user3", "password"=>"[FILTERED]", "authentication"=>{"username"=>"user3", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "user3"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 200 OK in 287ms (Views: 0.2ms | ActiveRecord: 11.4ms | Allocations: 7948)
+
+
+Started GET "/users" for ::1 at 2022-01-09 23:17:54 -0500
+Processing by UsersController#index as */*
+  Parameters: {"username"=>"user3", "password"=>"[FILTERED]", "user"=>{"username"=>"user3"}}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 162)
+
+
+Started GET "/comments" for ::1 at 2022-01-09 23:18:01 -0500
+Processing by CommentsController#index as */*
+  Parameters: {"username"=>"user3", "password"=>"[FILTERED]", "comment"=>{}}
+  [1m[36mComment Load (0.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 3.5ms | Allocations: 648)
+
+
