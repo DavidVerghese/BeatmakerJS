@@ -18,7 +18,7 @@ function App() {
       setPosts(posts);
     };
     fetchPosts();
-  }, );
+  }, []);
 
   return (
     <div className="app">
