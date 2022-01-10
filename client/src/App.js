@@ -18,8 +18,7 @@ function App() {
       setPosts(posts);
     };
     fetchPosts();
-    console.log(posts);
-  }, []);
+  }, );
 
   return (
     <div className="app">
