@@ -15,7 +15,7 @@ function Blog() {
   console.log(posts);
   return <div className="blog">
     <h1>Blog</h1>
-    {posts.map((index) => <div><p>{index.user_id}</p><p>{index.content}</p></div>)}
+    {posts.map((index) => <div><p>user id: {index.user_id}</p><p>{index.content}</p></div>)}
   </div>
 }
 export default Blog;
