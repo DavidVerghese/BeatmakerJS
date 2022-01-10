@@ -9,7 +9,7 @@ const getToken = () => {
 }
 
 const api = axios.create({
-  baseURL: process.env.NODE_ENV === 'production' ? 'https://onlinedaw-api.herokuapp.com' : 'http://localhost:3000'
+  baseURL: 'https://onlinedaw-api.herokuapp.com'
 })
 
 api.interceptors.request.use(async function (options) {
