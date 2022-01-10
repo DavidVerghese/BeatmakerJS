@@ -9,6 +9,7 @@ body {
 }
 a {
   color: #a0ebf9f9;
+  text-decoration: none;
 }
 button {
   height: 40px;
@@ -16,13 +17,15 @@ button {
   background-color: #a0ebf9f9;
   font-size: 110%;
 }
-
-
 .app {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
+
+
+
 
 
 
