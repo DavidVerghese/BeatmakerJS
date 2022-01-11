@@ -1,0 +1,48 @@
+.signup-container {
+  align-items: center;
+  padding: 1em;
+  margin: 0px auto;
+  text-align: center;
+}
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  padding: 20px;
+  border-radius: 10%;
+  background-color: black;
+}
+#signup-button {
+
+  text-decoration: none;
+  margin: 0 auto;
+}
+
+#signup-username,
+#signup-email,
+#signup-password,
+#signup-password-confirmation {
+  text-align: center;
+  margin: 5px 0px;
+  padding: 10px 0;
+  
+
+}
+
+.danger {
+  background: #e57373;
+}
+
+@media (min-width: 1000px) {
+  .signup-container {
+    width: 900px;
+  }
+}
+
+@media (max-width: 500px) {
+  .signup-container {
+    width: 90%;
+    padding: 0px;
+  }
+}
