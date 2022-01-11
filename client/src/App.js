@@ -6,6 +6,7 @@ import { Route } from "react-router-dom";
 import Home from './screens/Home/Home';
 import Blog from './screens/Blog/Blog';
 import SignUp from "./screens/SignUp/SignUp";
+import SignOut from './components/SignOut/SignOut';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 
@@ -27,6 +28,9 @@ function App() {
       <Route exact path="/"><Home /></Route>
       <Route exact path="/sign-up"><SignUp setUser={setUser}/></Route>
       <Route exact path="/sign-in"><Home /></Route>
+      <Route path="/sign-out">
+          <SignOut setUser={setUser} clearUser={clearUser}/>
+      </Route>
       <Footer/>
     </div>
   );
