@@ -19,7 +19,7 @@
 align-items: center;
   padding: 20px;
   border-radius: 10%;
-  border: 0.1px solid #9a4b38;
+  background-color: black;
 }
 
 .form-container form input {
