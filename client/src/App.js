@@ -9,8 +9,6 @@ import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 
 function App() {
-  const [posts, setPosts] = useState([]);
-
   return (
     <div className="app">
       <Header/>
