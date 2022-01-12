@@ -8,3 +8,13 @@ export const getComments = async () => {
       throw error
   }
 }
+
+export const createComment = async content => {
+  try {
+    const comment = { comment: content }
+      const response = await api.post('/comments', comment)
+      return response.data
+  } catch (error) {
+      throw error
+  }
+}

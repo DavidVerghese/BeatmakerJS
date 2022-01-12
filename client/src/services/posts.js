@@ -21,7 +21,6 @@ export const getPost = async id => {
 export const createPost = async content => {
   try {
     const post = { post: content }
-    console.log('here',post);
       const response = await api.post('/posts', post)
       return response.data
   } catch (error) {
