@@ -1,7 +1,7 @@
 import { signUp, signIn } from "../../services/users";
 import { useHistory } from "react-router-dom";
 import React, { useState } from "react";
-import BlogHeader from "../../components/BlogHeader/BlogHeader";
+import Header from "../../components/Header/Header";
 import './SignUp.css';
 
 function SignUp(props) {
@@ -64,7 +64,7 @@ function SignUp(props) {
   const { email, username, password, passwordConfirmation, user } = form;
 
   return ( <div className="signup-background">
-         <BlogHeader user={user}/>
+         <Header user={user}/>
   <div className="signup-container">
     <h1>Sign Up</h1>
     <form className="signup-form" onSubmit={onSignUp}>

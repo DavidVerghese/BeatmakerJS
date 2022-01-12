@@ -2,7 +2,7 @@ import './SignIn.css';
 import { signIn } from "../../services/users";
 import React, { useState } from "react";
 import { useHistory, Link } from "react-router-dom";
-import BlogHeader from '../../components/BlogHeader/BlogHeader';
+import Header from '../../components/Header/Header';
 function SignIn(props) {
 
   
@@ -64,7 +64,7 @@ function SignIn(props) {
   const { username, password, user } = form;
 
   return (<div className="signin">
-       <BlogHeader user={user}/>
+       <Header user={user}/>
     <div className="form-container">
         <h1>Sign In</h1>
         <p><i><Link to="sign-up">Sign up</Link> if you do not have an account</i></p>
