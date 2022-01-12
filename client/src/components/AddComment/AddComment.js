@@ -1,14 +1,15 @@
-import './AddPost.css';
+import './AddComment.css';
 import { useHistory } from "react-router-dom";
-import { createPost } from "../../services/posts";
+import { createComment } from "../../services/comments";
 import React, { useState } from "react";
 
-function AddPost(props) {
-  const user = props.user;
+function AddComment(props) {
   const history = useHistory();
+  const { user_id, post_id } = props;
   const [form, setForm] = useState({
     content: "",
-    user: user.id,
+    user: user_id,
+    post: post_id
   });
   const handleChange = (event) => {
     setForm({
@@ -16,20 +17,18 @@ function AddPost(props) {
       [event.target.name]: event.target.value,
     });
   };
+  
   const onSubmit = (event) => {
-    event.preventDefault();
-    createPost(form).then(() => history.push("/blog"))
+    createComment(form)
   }
   const { content } = form;
-  return (<div className="add-post">
-    <h2>Write a post</h2>
-    <p>Questions? Feedback? Suggestions? </p>
-
+  return (<div className="add-comment">
+    
     <form onSubmit={onSubmit}>
-        <label htmlFor="post-content">Content:</label>
+        <label htmlFor="comment-content">Add a comment</label>
           <textarea
             required
-            id="post-content"
+            id="comment-content"
             type="text"
             name="content"
             value={content}
@@ -38,8 +37,7 @@ function AddPost(props) {
             className="signin-input"
       />
        <button>Submit</button>
-      </form>
-  </div>)
+    </form>
+</div>)
 }
- 
-export default AddPost;
+export default AddComment;
