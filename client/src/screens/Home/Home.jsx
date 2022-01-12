@@ -7,10 +7,9 @@ import { Route, Link } from "react-router-dom";
 Modal.setAppElement('#root');
 
 function Home(props) {
-  const { setMusicMakerStarted } = props;
   return (<div className="home">
   <MobileWarning/>
-    <MusicMaker setMusicMakerStarted={setMusicMakerStarted} />
+    <MusicMaker />
 </div>)
 }
 export default Home
