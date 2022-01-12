@@ -15,6 +15,13 @@ function Blog(props) {
     };
     fetchPosts();
   }, []);
+  const firstToPost = function(){
+    return (<div className="first-to-post">
+      <p>^ Be the first person to write a comment</p>
+      <img src="https://media3.giphy.com/media/26AHONQ79FdWZhAI0/giphy.gif?cid=ecf05e472l3qr8om3koerbaubaq3wgjjphjhwzskkr1clbwh&rid=giphy.gif&ct=g" alt="typing" />
+    </div>)
+   
+  }
   const { user } = props;
   return <div className="blog">
     <BlogHeader user={user}/>
@@ -27,7 +34,8 @@ function Blog(props) {
       </div>
     
       <div className="posts-section">
-         {posts.map((index, key) => <Posts key={key} siteUser={user} created_at={index.created_at} post_id={index.id} content={index.content} user_id={index.user_id} />)}
+        {posts.length > 0 ? posts.map((index, key) => <Posts key={key} siteUser={user} created_at={index.created_at} post_id={index.id} content={index.content} user_id={index.user_id} />) : firstToPost()}
+         
       </div>
      
     </div>
