@@ -17,18 +17,6 @@ button {
   background-color: #a0ebf9f9;
   font-size: 110%;
 }
-header {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  text-align: center;
-  width: 100%;
-  margin: 10px 0px;
-  background-color: black;
-}
-header h1 {
-  background-color: black;
-}
 .app {
   display: flex;
   flex-direction: column;
