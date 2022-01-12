@@ -1,8 +1,9 @@
 import './InputRow.css';
 
 function InputRow(props) {
-  return (<div className="input-row"><p className={props.color}>{props.noteName}</p>
-  <div className={props.className}>
+  const { color, className, noteName} = props;
+  return (<div className="input-row"><p className={color}>{noteName}</p>
+  <div className={className}>
   <input type="checkbox" />
   <input type="checkbox" />
   <input type="checkbox" />
