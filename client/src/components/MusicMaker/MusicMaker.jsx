@@ -52,7 +52,6 @@ function MusicMaker(props) {
   const [startButtonClicked, setStartButtonClicked] = useState(false);
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [refresh, setRefresh] = useState(false);
-  const { setMusicMakerStarted } = props;
   if (startButtonClicked) {
     return (<div className="musicmaker">
       <div className="topbar"><button onClick={() => setModalIsOpen(true)}>How to Use This</button><button onClick={() => { window.location.reload(false); }}>Stop</button></div>
@@ -78,7 +77,7 @@ function MusicMaker(props) {
         
       </div>
       
-      <button onClick={() => { if (!startButtonClicked) { startSequencer() }; setStartButtonClicked(true);setMusicMakerStarted(true)}}>Click to Enter</button>
+      <button onClick={() => { if (!startButtonClicked) { startSequencer() }; setStartButtonClicked(true);}}>Click to Enter</button>
      
     </div>)
   }

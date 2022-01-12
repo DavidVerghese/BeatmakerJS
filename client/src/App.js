@@ -15,7 +15,6 @@ import Header from './components/Header/Header';
 
 function App() {
   const [user, setUser] = useState(false);
-  const [musicMakerStarted, setMusicMakerStarted] = useState(false);
   const clearUser = () => setUser(null)
   useEffect(() => {
     const fetchUser = async () => {
@@ -26,9 +25,9 @@ function App() {
   }, [])
   return (
     <div className="app">
-      <Header musicMakerStarted={musicMakerStarted} user={user}/>
+      <Header user={user}/>
       <Route exact path="/blog"><Blog user={user}/></Route>
-      <Route exact path="/"><Home setMusicMakerStarted={setMusicMakerStarted}/></Route>
+      <Route exact path="/"><Home/></Route>
       <Route exact path="/sign-up"><SignUp setUser={setUser}/></Route>
       <Route exact path="/sign-in"> <SignIn setUser={setUser} /></Route>
       <Route exact path="/sign-out">
