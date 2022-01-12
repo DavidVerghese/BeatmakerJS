@@ -10,7 +10,6 @@ import SignUp from "./screens/SignUp/SignUp";
 import SignOut from './components/SignOut/SignOut';
 import SignIn from './screens/SignIn/SignIn';
 import Footer from './components/Footer/Footer';
-import Header from './components/Header/Header';
 
 
 function App() {
@@ -25,11 +24,10 @@ function App() {
   }, [])
   return (
     <div className="app">
-      <Header user={user}/>
       <Route exact path="/blog"><Blog user={user}/></Route>
-      <Route exact path="/"><Home/></Route>
-      <Route exact path="/sign-up"><SignUp setUser={setUser}/></Route>
-      <Route exact path="/sign-in"> <SignIn setUser={setUser} /></Route>
+      <Route exact path="/"><Home user={user}/></Route>
+      <Route exact path="/sign-up"><SignUp user={user} setUser={setUser}/></Route>
+      <Route exact path="/sign-in"> <SignIn user={user} setUser={setUser} /></Route>
       <Route exact path="/sign-out">
           <SignOut setUser={setUser} clearUser={clearUser}/>
       </Route>

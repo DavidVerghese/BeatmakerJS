@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Posts from "../../components/Posts/Posts";
 import AddPost from "../../components/AddPost/AddPost";
+import BlogHeader from "../../components/BlogHeader/BlogHeader";
 import { getPosts } from "../../services/posts";
 import './Blog.css'
 import { Link } from "react-router-dom";
@@ -16,6 +17,7 @@ function Blog(props) {
   }, []);
   const { user } = props;
   return <div className="blog">
+    <BlogHeader user={user}/>
     <h1>Blog</h1>
     <div className="posts">
     {user ? <Link to="add-post"><button>Write a post</button></Link> : null}

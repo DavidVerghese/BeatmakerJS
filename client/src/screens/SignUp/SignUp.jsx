@@ -1,6 +1,7 @@
 import { signUp, signIn } from "../../services/users";
 import { useHistory } from "react-router-dom";
 import React, { useState } from "react";
+import BlogHeader from "../../components/BlogHeader/BlogHeader";
 import './SignUp.css';
 
 function SignUp(props) {
@@ -30,7 +31,7 @@ function SignUp(props) {
     signUp(form)
       .then(() => signIn(form))
       .then((user) => setUser(user))
-      .then(() => history.push("/"))
+      .then(() => history.push("/blog"))
       .catch((error) => {
         console.error(error);
         setForm({
@@ -60,10 +61,10 @@ function SignUp(props) {
     }
   };
 
-  const { email, username, password, passwordConfirmation } = form;
+  const { email, username, password, passwordConfirmation, user } = form;
 
   return ( <div className="signup-background">
-     
+         <BlogHeader user={user}/>
   <div className="signup-container">
     <h1>Sign Up</h1>
     <form className="signup-form" onSubmit={onSignUp}>
