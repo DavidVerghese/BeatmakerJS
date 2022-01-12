@@ -10,7 +10,8 @@ Modal.setAppElement('#root');
 function Home(props) {
   const { user } = props;
   return (<div className="home">
-     <Header user={user}/>
+    <Header user={user} />
+    <div id="ready"></div>
   <MobileWarning/>
     <MusicMaker />
 </div>)

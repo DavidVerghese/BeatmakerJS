@@ -1,3 +1,6 @@
+#contact-h1 {
+  text-align: center;
+}
 .musicmaker {
   border: 1px solid white;
   display: flex;
@@ -17,15 +20,61 @@
   flex-direction: column;
   align-items: center;
   min-width: 499px;
-  height: 100vh;
 }
 .home h1 {
   background-color: black;
 }
 .home button {
-  height: 50px;
-  width: 150px;
+  min-height: 50px;
+  min-width: 150px;
   margin: 20px;
+  background-color: #ffce00;
+}
+.intro {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #f7f6f1;
+  height: 90vh;
+}
+.intro h1 {
+  color: #ffce00;
+}
+
+
+.intro img {
+  max-width: 700px;
+}
+.intro-b {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 90vh;
+}
+.intro-b img {
+  max-height: 500px;
+}
+.intro-b-text {
+  max-width: 500px;
+}
+.intro-c {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  background-image: url('https://images.unsplash.com/photo-1511881830150-850572962174?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=776&q=80');
+}
+.intro-c-text {
+  max-width: 500px;
+}
+.intro-c h2 {
+  background-color: black;
+  color: #ffce00;
+  padding: 20px;
+}
+.intro-c img {
+  max-width: 500px;
 }
 .home-pics {
   display: flex;
