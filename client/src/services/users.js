@@ -11,8 +11,9 @@ export const getUser = async id => {
 }
 
 export const signUp = async credentials => {
-    try {
-        const resp = await api.post('/sign-up', credentials)
+  try {
+        const form = { user: { ...credentials } }
+        const resp = await api.post('/users', form)
         localStorage.setItem('token', resp.data.token)
         const user = jwtDecode(resp.data.token)
         return user
@@ -22,8 +23,9 @@ export const signUp = async credentials => {
 }
 
 export const signIn = async credentials => {
-    try {
-        const resp = await api.post('/sign-in', credentials)
+  try {
+      const form = { authentication: { ...credentials } }
+        const resp = await api.post('/auth/login', form)
         localStorage.setItem('token', resp.data.token)
         const user = jwtDecode(resp.data.token)
         return user
