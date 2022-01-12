@@ -16,7 +16,6 @@ function Posts(props) {
     };
     fetchUser();
   }, []);
-  console.log(siteUser);
   useEffect(() => {
     const fetchComments = async () => {
       const comments = await getComments();
