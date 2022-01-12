@@ -1,14 +1,23 @@
 .add-post {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
   background-color: black;
   padding: 20px;
-  margin: 20px;
-  width: 700px;
+  /* margin: 20px; */
+  width: 100%;
+}
+.add-post form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.add-post label {
+  display: none;
 }
 .add-post textarea {
-  width: 80%;
+  width: 100%;
   margin: 20px;
 
 }

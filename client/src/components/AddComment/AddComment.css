@@ -1,6 +1,17 @@
+.add-comment {
+  margin: 10px 10px;
+  color: white;
+}
+.add-comment button {
+  margin: 0px 10px;
+}
 .add-comment form{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+}
+.add-comment textarea {
   background-color: black;
+  color: white;
+}
+.add-comment label {
+  display: none;
 }

@@ -19,10 +19,17 @@ function Blog(props) {
   return <div className="blog">
     <BlogHeader user={user}/>
     <h1>Blog</h1>
-    <div className="posts">
-    {user ? <Link to="add-post"><button>Write a post</button></Link> : null}
-      <h2>Posts:</h2>
-      {posts.map((index, key) => <Posts key={key} siteUser={user} created_at={index.created_at} post_id={index.id} content={index.content} user_id={index.user_id} />)}
+    <div className="blog-content">
+      <h2>Comments: </h2>
+      <em>{posts.length} comments</em>
+      <div>
+        {user ? <AddPost user={user} /> : <Link to="sign-in"><textarea placeholder="Add a comment..." /></Link>}
+      </div>
+    
+      <div className="posts-section">
+         {posts.map((index, key) => <Posts key={key} siteUser={user} created_at={index.created_at} post_id={index.id} content={index.content} user_id={index.user_id} />)}
+      </div>
+     
     </div>
     
    

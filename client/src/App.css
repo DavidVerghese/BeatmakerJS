@@ -2,19 +2,21 @@
 
 body {
   background-color: black;
-  color: #a0ebf9f9;
+  /* color: #a0ebf9f9; */
+  color: white;
   font-family: 'Staatliches', cursive;
   font-size: 20px;
   margin: 0px;
 }
 a {
-  color: #a0ebf9f9;
+  /* color: #a0ebf9f9; */
+  color: white;
   text-decoration: none;
 }
 button {
   height: 40px;
   font-family: 'Staatliches', cursive;
-  background-color: #a0ebf9f9;
+  /* background-color: #a0ebf9f9; */
   font-size: 110%;
 }
 .app {
@@ -23,14 +25,22 @@ button {
   align-items: center;
 }
 
-
+.profile-pic {
+  max-width: 70px;
+  max-height: 70px;
+}
+.profile-pic img {
+  object-fit: fill;
+  width: 100%;
+  border-radius: 50%;
+}
 
 
 
 
 
 @media only screen and (min-width: 501px) {
-  body {
+  /* body {
     background-image: url('../public/studio.jpg');
-  }
+  } */
 }

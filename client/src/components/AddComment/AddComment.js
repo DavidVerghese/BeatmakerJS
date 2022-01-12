@@ -32,7 +32,7 @@ function AddComment(props) {
             type="text"
             name="content"
             value={content}
-            placeholder="what are your thoughts?"
+            placeholder="Add a reply"
             onChange={handleChange}
             className="signin-input"
       />

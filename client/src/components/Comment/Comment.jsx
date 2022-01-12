@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 function Comment(props) {
   const [user, setUser] = useState([]);
-  const { created_at,user_id, content } = props;
+  const { created_at,user_id, content, number } = props;
   let year = created_at.slice(0, 4);
     let monthNumber = created_at.slice(5, 7);
     let monthsArray = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
@@ -19,6 +19,15 @@ function Comment(props) {
     };
     fetchUser();
   }, []);
-  return <div className="comments"><p>{date}</p><p>{user.username}:</p><p>{content}</p></div>
+  return <div className="comments">
+       <div className="profile-pic">
+      <img src="https://www.nareb.com/site-files/uploads/2017/03/fg-avatar-anonymous-user-retina.png" alt="profile" />
+    </div>
+    <div>
+    <div className="username-and-date"> <p><b>{user.username}</b></p><i><p>{date} </p></i></div>
+   <p>{content}</p>
+    </div>
+
+  </div>
 }
 export default Comment;
