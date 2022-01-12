@@ -4,7 +4,7 @@ import { createPost } from "../../services/posts";
 import React, { useState } from "react";
 
 function AddPost(props) {
-  const user = props.user;
+  const { user } = props;
   const history = useHistory();
   const [form, setForm] = useState({
     content: "",
