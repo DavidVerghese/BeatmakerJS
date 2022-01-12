@@ -5,6 +5,7 @@ import { verifyUser } from './services/users'
 import { Route } from "react-router-dom";
 import Home from './screens/Home/Home';
 import Blog from './screens/Blog/Blog';
+import AddPost from './components/AddPost/AddPost';
 import SignUp from "./screens/SignUp/SignUp";
 import SignOut from './components/SignOut/SignOut';
 import SignIn from './screens/SignIn/SignIn';
@@ -25,13 +26,14 @@ function App() {
   return (
     <div className="app">
       <Header user={user}/>
-      <Route exact path="/blog"><Blog/></Route>
+      <Route exact path="/blog"><Blog user={user}/></Route>
       <Route exact path="/"><Home /></Route>
       <Route exact path="/sign-up"><SignUp setUser={setUser}/></Route>
       <Route exact path="/sign-in"> <SignIn setUser={setUser} /></Route>
-      <Route path="/sign-out">
+      <Route exact path="/sign-out">
           <SignOut setUser={setUser} clearUser={clearUser}/>
       </Route>
+      <Route exact path="/add-post"><AddPost user={user}/></Route>
       <Footer/>
     </div>
   );

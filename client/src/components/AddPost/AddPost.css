@@ -1,0 +1,14 @@
+.add-post {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  padding: 20px;
+  margin: 20px;
+  width: 700px;
+}
+.add-post textarea {
+  width: 80%;
+  margin: 20px;
+
+}
