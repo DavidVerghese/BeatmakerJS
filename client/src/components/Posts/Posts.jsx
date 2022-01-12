@@ -31,7 +31,7 @@ function Posts(props) {
     <p>{user.username}:</p>
       <p>{props.content}</p>
     </div>
-    {comments.map((index) => props.post_id === index.post_id ? <Comment user_id={index.user_id} content={index.content}/> : null)}
+    {comments.map((index, key) => props.post_id === index.post_id ? <Comment key={key} user_id={index.user_id} content={index.content}/> : null)}
     {siteUser ? <AddComment post_id={post_id} user_id={user_id}/>:null}
   </div>)
 }

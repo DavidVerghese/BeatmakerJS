@@ -5,7 +5,7 @@ function Header(props) {
   let user = props.user;
   return <header>
     <Link to="/" target="_blank" rel="noopener noreferrer" ><p>David Verghese's Online Daw</p></Link>
-    {user ? <p>Sign Out</p> : <><Link to="/sign-in" ><p>Sign in</p></Link>
+    {user ?  <Link to="/sign-out" ><p>Sign Out</p></Link> : <><Link to="/sign-in" ><p>Sign in</p></Link>
       <Link to="/sign-up" ><p>Sign up</p></Link>
     </>}
     <Link to="/blog" >Blog</Link>
