@@ -20,7 +20,7 @@ function Blog(props) {
     <div className="posts">
     {user ? <Link to="add-post"><button>Write a post</button></Link> : null}
       <h2>Posts:</h2>
-      {posts.map((index) => <Posts user={user} post_id={index.id} content={index.content} user_id={index.user_id} />)}
+      {posts.map((index, key) => <Posts key={key} user={user} post_id={index.id} content={index.content} user_id={index.user_id} />)}
     </div>
     
    
