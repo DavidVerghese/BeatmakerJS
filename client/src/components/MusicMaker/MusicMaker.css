@@ -1,12 +1,18 @@
 #contact-h1 {
   text-align: center;
 }
+#how-to-use, #stop {
+  background-color:#f4e18f;
+}
 .musicmaker {
-  border: 1px solid white;
+  border: 1px solid rgba(270,270,270,0.5);
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: black;
+}
+.musicmaker h3 {
+  color:#eee8c9;
 }
 .topbar {
   display: flex;
