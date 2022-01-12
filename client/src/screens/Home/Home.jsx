@@ -6,10 +6,11 @@ import { Route, Link } from "react-router-dom";
 
 Modal.setAppElement('#root');
 
-function Home() {
+function Home(props) {
+  const { setMusicMakerStarted } = props;
   return (<div className="home">
   <MobileWarning/>
-  <MusicMaker/>
+    <MusicMaker setMusicMakerStarted={setMusicMakerStarted} />
 </div>)
 }
 export default Home

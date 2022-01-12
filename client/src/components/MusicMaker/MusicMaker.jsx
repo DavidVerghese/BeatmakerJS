@@ -48,11 +48,11 @@ async function startSequencer() {
 const noteNamesC1ToC2 = ["C2", "B1", "A1", "G1", "F1", "E1", "D1", "C1"];
 const noteNamesC4ToC5 = ["C5", "B4", "A4", "G4", "F4", "E4", "D4", "C4"];
 
-function MusicMaker() {
+function MusicMaker(props) {
   const [startButtonClicked, setStartButtonClicked] = useState(false);
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [refresh, setRefresh] = useState(false);
-
+  const { setMusicMakerStarted } = props;
   if (startButtonClicked) {
     return (<div className="musicmaker">
       <div className="topbar"><button onClick={() => setModalIsOpen(true)}>How to Use This</button><button onClick={() => { window.location.reload(false); }}>Stop</button></div>
@@ -78,7 +78,7 @@ function MusicMaker() {
         
       </div>
       
-      <button onClick={() => { if (!startButtonClicked) { startSequencer() }; setStartButtonClicked(true) }}>Click to Enter</button>
+      <button onClick={() => { if (!startButtonClicked) { startSequencer() }; setStartButtonClicked(true);setMusicMakerStarted(true)}}>Click to Enter</button>
      
     </div>)
   }
