@@ -2,6 +2,7 @@ import './SignIn.css';
 import { signIn } from "../../services/users";
 import React, { useState } from "react";
 import { useHistory, Link } from "react-router-dom";
+import BlogHeader from '../../components/BlogHeader/BlogHeader';
 function SignIn(props) {
 
   
@@ -31,7 +32,7 @@ function SignIn(props) {
       .then((user) => {
         setUser(user);
       })
-      .then(() => history.push("/"))
+      .then(() => history.push("/blog"))
       .catch((error) => {
         console.error(error);
         setForm({
@@ -60,10 +61,10 @@ function SignIn(props) {
     }
   };
 
-  const { username, password } = form;
+  const { username, password, user } = form;
 
   return (<div className="signin">
-   
+       <BlogHeader user={user}/>
     <div className="form-container">
         <h1>Sign In</h1>
         <p><i><Link to="sign-up">Sign up</Link> if you do not have an account</i></p>
