@@ -40,7 +40,7 @@ function Posts(props) {
   return (<div className="posts">
     <div className="original-post">
       <div className="profile-pic">
-      <img src="https://www.nareb.com/site-files/uploads/2017/03/fg-avatar-anonymous-user-retina.png" alt="profile" />
+      {user.profile_pic ?   <img src={user.profile_pic} alt="profile" /> : <img src="https://www.nareb.com/site-files/uploads/2017/03/fg-avatar-anonymous-user-retina.png" alt="profile" />}
       </div>
       <div className="original-post-div">
       <div className="username-and-date"> <p><b>{user.username}</b></p><i><p>{date} </p></i></div>
@@ -53,7 +53,8 @@ function Posts(props) {
       <div className="post-interface"><p onClick={() => { setSeeReplies(!seeReplies) }}>{seeReplies ? commentCount > 0 ? commentCount>1 ? `Hide ${commentCount} replies`: `Hide ${commentCount} reply` :null: commentCount > 0 ? commentCount>1 ? `View ${commentCount} replies`: `View ${commentCount} reply` :null}</p>
         </div>
        
-       {seeReplies ? comments.map((index, key) => { if (post_id === index.post_id) { return <Comment created_at={index.created_at} key={key} number={commentCount} user_id={index.user_id} content={index.content} /> } else { return null } }) : null}
+        
+       {seeReplies ? comments.map((index, key) => { if (post_id === index.post_id) { return <Comment created_at={index.created_at} key={key} number={commentCount} user_id={index.user_id} content={index.content} profile_pic={index.profile_pic} /> } else { return null } }) : null}
     
     </div>
 
