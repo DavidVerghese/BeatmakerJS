@@ -1,6 +1,7 @@
 .input-row {
   display: flex;
   margin: 10px 0px;
+  color: rgb(242, 242, 223);
 }
 .input-row input {
   margin: 10px 25px;
@@ -30,7 +31,9 @@
   color: #9f9a9a;
 }
 .zero, .one, .two, .three, .four, .five, .six, .seven {
-  background-color: rgb(84, 3, 3);
+  /* background-color: rgb(84, 3, 3); */
+  background-color: rgba(270,270,270,0.12);
+  box-shadow: 0px 0.5px 0.5px 0.5px white;
   margin: 10px 10px;
 }
 @media only screen and (min-width: 1100px) {
