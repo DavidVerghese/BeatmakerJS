@@ -14,7 +14,7 @@ a {
   text-decoration: none;
 }
 button {
-  height: 40px;
+  min-height: 40px;
   font-family: 'Staatliches', cursive;
   /* background-color: #a0ebf9f9; */
   font-size: 110%;

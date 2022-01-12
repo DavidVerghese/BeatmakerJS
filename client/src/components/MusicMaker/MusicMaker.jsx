@@ -5,7 +5,7 @@ import InputGrid from "../InputGrid/InputGrid"
 import { useState } from "react";
 import Modal from 'react-modal';
 import YoutubeModal from '../YoutubeModal/YoutubeModal';
-
+import { Link } from 'react-router-dom';
 import kickFile from '../../sounds/drums/kick.wav';
 import snareFile from '../../sounds/drums/snare.wav';
 import hihatFile from '../../sounds/drums/hihat.wav';
@@ -65,20 +65,31 @@ function MusicMaker(props) {
     </div>)
   }
   else {
-    return (<div className="home">
-      <h1>Ready to make music?</h1>
-      <div className="home-pics">
-        <div><img alt="vinyl record" src="https://media0.giphy.com/media/ZvaS4Aodq0BURmpLpA/giphy.gif?cid=ecf05e47wfx1ebbps4jpkzi2jk5hkuccy31m5c18zhuhdo8h&rid=giphy.gif&ct=g" /></div>
-        <div>   <img alt="playing bass" src="https://media3.giphy.com/media/26tk1hvtzWSRZlz5S/giphy.gif?cid=ecf05e4700r9r737r4uacrbtah0k65cs0v61akeh733pan5i&rid=giphy.gif&ct=g" /></div>
-        <div>    <img alt="playing guitar" src="https://media4.giphy.com/media/1QEAlV5yu62Ag/giphy.gif?cid=ecf05e4760xyudhok1k317cqpr70v9b72n9odpkvxod0hi0k&rid=giphy.gif&ct=g" /></div>
-        <div><img alt="playing drums" src="https://media4.giphy.com/media/IiwoJn6BPM4ww/giphy.gif?cid=ecf05e47d2zmpj4itqkba4b8mtc2eymrs6so75jgcwgv1kqq&rid=giphy.gif&ct=g" /></div>
-     
-    
-        
-      </div>
-      
+    return (<div>
+      <div className="intro">
+      <div>
+          <h1>Ready to make music?</h1>
+          <p>Your complete online workstation for producing music</p>
       <button onClick={() => { if (!startButtonClicked) { startSequencer() }; setStartButtonClicked(true);}}>Click to Enter</button>
-     
+      </div>
+      <img src="https://images.unsplash.com/photo-1508081444780-e2ea2f0b4754?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8ZGVhbnxlbnwwfHwwfHw%3D&w=1000&q=80" alt="guitar"/>
+      </div>
+      <div className="intro-b">
+        
+        <div className="intro-b-text">
+          <h2>Music making is what we do</h2>
+        <p>Check our blog to see insights and tips from fellow users of this site. Welcome to a international community of dedicated and inspired musicmakers and content creators.</p>
+        <Link to="/blog"target="_blank" rel="noopener noreferrer" ><button>Visit the Blog</button></Link>
+        </div>
+        
+        <img alt="accordionist" src="https://images.unsplash.com/photo-1593122444709-8f312cc22e88?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" />
+      </div>
+      <div className="intro-c">
+        <div className="intro-c-text"><h2>The Online Daw requires no prior musical experience or background. If you have ever dreamed of making music, but never had the chance, this app is for you.</h2></div>
+        <a href="#ready"><button><p>Get started</p></button></a>
+      </div>
+      <h1 id="contact-h1">Get in contact with me: </h1>
+      
     </div>)
   }
 }
