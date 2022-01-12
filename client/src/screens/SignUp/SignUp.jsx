@@ -27,13 +27,16 @@ function SignUp(props) {
   const onSignUp = (event) => {
     event.preventDefault();
     const { setUser } = props;
-    
-    signUp(form)
+    if (password !== passwordConfirmation)
+    { setForm({ ...form, isError: true, errorMsg: "passwords need to match" }) }
+    else {
+      const smallerForm = {username:username,email:email,password:password}
+      signUp(smallerForm)
       .then(() => signIn(form))
       .then((user) => setUser(user))
       .then(() => history.push("/blog"))
-      .catch((error) => {
-        console.error(error);
+        .catch((error) => {
+          console.log(error);
         setForm({
           email: "",
           password: "",
@@ -42,6 +45,9 @@ function SignUp(props) {
           errorMsg: "Sign Up Details Invalid",
         });
       });
+    }
+
+    
   };
 
   const renderError = () => {
@@ -68,7 +74,7 @@ function SignUp(props) {
   <div className="signup-container">
     <h1>Sign Up</h1>
     <form className="signup-form" onSubmit={onSignUp}>
-    <label htmlFor="signup-username">Username</label>
+        <label htmlFor="signup-username">Username: <em>cannot be a username currently in use</em></label>
         <input
         required
         type="text"
@@ -78,7 +84,7 @@ function SignUp(props) {
         onChange={handleChange}
         id="signup-username"
         />
-         <label htmlFor="signup-email">Email</label>
+        <label htmlFor="signup-email">Email: <em>cannot be an email address currently in use</em></label>
       <input
         required
         type="email"
@@ -88,7 +94,7 @@ function SignUp(props) {
         onChange={handleChange}
         id="signup-email"
         />
-         <label htmlFor="signup-password">Password</label>
+        <label htmlFor="signup-password">Password: <em>Must be at least 6 characters long</em></label>
       <input
         required
         name="password"
