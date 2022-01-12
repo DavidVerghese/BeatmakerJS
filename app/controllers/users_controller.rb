@@ -5,7 +5,7 @@ class UsersController < ApplicationController
 
   # GET /users/1
   def show
-    render json: @user.attributes.except("password_digest")
+    render json: @user.attributes.except("password_digest","email")
   end
   
   # POST /users
@@ -15,7 +15,7 @@ class UsersController < ApplicationController
     if @user.save
       @token = encode({id: @user.id})
       render json: {
-        user: @user.attributes.except("password_digest"),
+        user: @user.attributes.except("password_digest","email"),
         token: @token
         }, status: :created
     else
