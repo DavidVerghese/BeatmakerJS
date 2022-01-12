@@ -1,6 +1,21 @@
 .blog {
-  width: 700px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.blog-content {
+  width: 100%;
+}
+.blog textarea {
+  width: 50%;
+  margin: 30px 10px;
+}
+.first-to-post img {
+  max-width: 250px;
+}
+.posts-section {
   display: flex;
   flex-direction: column;
   align-items: center;

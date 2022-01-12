@@ -31,7 +31,6 @@ function App() {
       <Route exact path="/sign-out">
           <SignOut setUser={setUser} clearUser={clearUser}/>
       </Route>
-      <Route exact path="/add-post"><AddPost user={user}/></Route>
       <Footer/>
     </div>
   );

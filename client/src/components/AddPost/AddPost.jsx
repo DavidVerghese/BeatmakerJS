@@ -1,11 +1,9 @@
 import './AddPost.css';
-import { useHistory } from "react-router-dom";
 import { createPost } from "../../services/posts";
 import React, { useState } from "react";
 
 function AddPost(props) {
   const { user } = props;
-  const history = useHistory();
   const [form, setForm] = useState({
     content: "",
     user: user.id,
@@ -13,18 +11,16 @@ function AddPost(props) {
   const handleChange = (event) => {
     setForm({
       ...form,
+      user: user.id,
       [event.target.name]: event.target.value,
     });
   };
-  const onSubmit = (event) => {
-    event.preventDefault();
-    createPost(form).then(() => history.push("/blog"))
+  const onSubmit = () => {
+    createPost(form)
   }
   const { content } = form;
-  return (<div className="add-post">
-    <h2>Write a post</h2>
-    <p>Questions? Feedback? Suggestions? </p>
 
+  return (<div className="add-post">
     <form onSubmit={onSubmit}>
         <label htmlFor="post-content">Content:</label>
           <textarea
@@ -33,7 +29,7 @@ function AddPost(props) {
             type="text"
             name="content"
             value={content}
-            placeholder="what are your thoughts?"
+            placeholder="Write a comment"
             onChange={handleChange}
             className="signin-input"
       />
