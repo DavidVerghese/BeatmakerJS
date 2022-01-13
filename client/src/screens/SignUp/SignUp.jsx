@@ -11,6 +11,7 @@ function SignUp(props) {
     username: "",
     email: "",
     password: "",
+    profile_pic: "",
     passwordConfirmation: "",
     isError: false,
     errorMsg: "",
@@ -30,7 +31,7 @@ function SignUp(props) {
     if (password !== passwordConfirmation)
     { setForm({ ...form, isError: true, errorMsg: "passwords need to match" }) }
     else {
-      const smallerForm = {username:username,email:email,password:password}
+      const smallerForm = {username:username,email:email,password:password,profile_pic:profile_pic}
       signUp(smallerForm)
       .then(() => signIn(form))
       .then((user) => setUser(user))
@@ -41,6 +42,7 @@ function SignUp(props) {
           email: "",
           password: "",
           passwordConfirmation: "",
+          profile_pic:"",
           isError: true,
           errorMsg: "Sign Up Details Invalid",
         });
@@ -67,7 +69,7 @@ function SignUp(props) {
     }
   };
 
-  const { email, username, password, passwordConfirmation, user } = form;
+  const { email, username, password, passwordConfirmation, user, profile_pic } = form;
 
   return ( <div className="signup-background">
          <Header user={user}/>
@@ -94,6 +96,16 @@ function SignUp(props) {
         onChange={handleChange}
         id="signup-email"
         />
+        <label htmlFor="signup-profile-pic">Profile Picture URL: <em>Optional</em></label>
+        <input
+          required
+        name="profile_pic"
+        value={profile_pic}
+        type="profile_pic"
+        placeholder="Enter profile picture url"
+        onChange={handleChange}
+        id="signup-profile-pic"
+      />
         <label htmlFor="signup-password">Password: <em>Must be at least 6 characters long</em></label>
       <input
         required
