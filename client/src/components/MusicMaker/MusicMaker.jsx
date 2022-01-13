@@ -77,7 +77,7 @@ function MusicMaker() {
         
         <div className="intro-b-text">
           <h2>Music making is what we do</h2>
-        <p>Check our blog to see insights and tips from fellow users of this site. Welcome to a international community of dedicated and inspired musicmakers and content creators.</p>
+        <p>Check our blog to see insights and tips from fellow users of this site. Welcome to an international community of dedicated and inspired musicmakers and content creators.</p>
         <Link to="/blog"target="_blank" rel="noopener noreferrer" ><button>Visit the Blog</button></Link>
         </div>
         
