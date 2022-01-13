@@ -64,9 +64,11 @@
 }
 .intro-b img {
   max-height: 500px;
+  max-width: 30%;
 }
 .intro-b-text {
   max-width: 500px;
+  margin: 10px;
 }
 .intro-c {
   display: flex;
@@ -108,11 +110,26 @@
   .home-pics {
     display: none;
   }
+
 }
 @media only screen and (max-height: 500px) {
   .home-pics {
     display: none;
   }
+  .intro {
+    font-size: 80%;
+    align-items: flex-start;
+  }
+  .intro h1 {
+    font-size: 100%;
+  }
+  .intro, .intro-b, .intro-c {
+    height: 100%;
+  }
+  .intro button {
+    margin: 0px;
+  }
+
 
 }
 @media only screen and (max-width: 500px) {
