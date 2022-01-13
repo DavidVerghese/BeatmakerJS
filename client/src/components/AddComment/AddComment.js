@@ -1,10 +1,8 @@
 import './AddComment.css';
-import { useHistory } from "react-router-dom";
 import { createComment } from "../../services/comments";
 import React, { useState } from "react";
 
 function AddComment(props) {
-  const history = useHistory();
   const { user_id, post_id } = props;
   const [form, setForm] = useState({
     content: "",

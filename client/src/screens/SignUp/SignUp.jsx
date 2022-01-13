@@ -71,7 +71,7 @@ function SignUp(props) {
     }
   };
 
-  const { email, username, password, passwordConfirmation, user, profile_pic } = form;
+  const { email, username, password, passwordConfirmation, profile_pic } = form;
 
   return ( <div className="signup-background">
          <AuthenticationHeader user={siteUser}/>
