@@ -19,7 +19,7 @@ function Comment(props) {
       setProfilePic(user.profile_pic);
     };
     fetchUser();
-  }, []);
+  }, [user_id]);
   return <div className="comments">
     <div className="profile-pic">
 

@@ -19,7 +19,7 @@ function Posts(props) {
       setUser(user);
     };
     fetchUser();
-  }, []);
+  }, [user_id]);
   useEffect(() => {
     const fetchComments = async () => {
       const comments = await getComments();
