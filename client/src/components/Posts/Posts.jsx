@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 function Posts(props) {
   const [user, setUser] = useState([]);
-  const { post_id, created_at, username, content, siteUser, user_id } = props;
+  const { post_id, created_at, content, siteUser, user_id } = props;
   const [comments, setComments] = useState([]);
   const [seeReplies, setSeeReplies] = useState(false);
   const [addReply, setAddReply] = useState(false);
