@@ -130,6 +130,12 @@
   .intro button {
     margin: 0px;
   }
+  #how-to-use, #stop {
+    margin: 0px;
+  }
+  .musicmaker h3 {
+    margin: 0px;
+  }
 
 
 }
