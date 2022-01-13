@@ -46,3 +46,15 @@
 .username-and-date p {
   margin: 0 10px;
 }
+
+@media (max-width: 900px) {
+  .posts {
+    width: 90%;
+  }
+}
+@media only screen and (max-height: 500px) {
+  .original-post{
+    padding: 10px;
+    margin: 10px;
+  }
+}

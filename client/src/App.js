@@ -6,6 +6,7 @@ import { Route } from "react-router-dom";
 import Home from './screens/Home/Home';
 import Blog from './screens/Blog/Blog';
 import AddPost from './components/AddPost/AddPost';
+import MobileWarning from './components/MobileWarning/MobileWarning';
 import SignUp from "./screens/SignUp/SignUp";
 import SignOut from './components/SignOut/SignOut';
 import SignIn from './screens/SignIn/SignIn';
@@ -24,6 +25,7 @@ function App() {
   }, [])
   return (
     <div className="app">
+       <MobileWarning/>
       <Route exact path="/blog"><Blog user={user}/></Route>
       <Route exact path="/"><Home user={user}/></Route>
       <Route exact path="/sign-up"><SignUp user={user} setUser={setUser}/></Route>

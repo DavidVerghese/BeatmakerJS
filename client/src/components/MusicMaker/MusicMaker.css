@@ -117,11 +117,12 @@
     display: none;
   }
   .intro {
-    font-size: 80%;
+    /* font-size: 80%; */
     align-items: flex-start;
   }
   .intro h1 {
     font-size: 100%;
+    color: white;
   }
   .intro, .intro-b, .intro-c {
     height: 100%;

@@ -1,5 +1,4 @@
 import './Home.css';
-import MobileWarning from '../../components/MobileWarning/MobileWarning';
 import MusicMaker  from '../../components/MusicMaker/MusicMaker';
 import Modal from 'react-modal';
 import { Route, Link } from "react-router-dom";
@@ -12,7 +11,6 @@ function Home(props) {
   return (<div className="home">
     <Header user={user} />
     <div id="ready"></div>
-  <MobileWarning/>
     <MusicMaker />
 </div>)
 }
