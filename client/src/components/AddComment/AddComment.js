@@ -6,7 +6,6 @@ import React, { useState } from "react";
 function AddComment(props) {
   const history = useHistory();
   const { user_id, post_id } = props;
-  console.log(user_id);
   const [form, setForm] = useState({
     content: "",
     user: user_id,

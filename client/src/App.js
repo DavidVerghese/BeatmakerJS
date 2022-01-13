@@ -23,7 +23,6 @@ function App() {
     }
     fetchUser()
   }, [])
-  console.log(user);
   return (
     <div className="app">
        <MobileWarning/>
