@@ -3,3 +3,11 @@
   margin: 20px;
 
 }
+
+@media only screen and (max-height: 500px) {
+  .lead, .bass, .drums {
+    margin: 10px 20px;
+    padding: 10px 20px;
+  
+  }
+}
