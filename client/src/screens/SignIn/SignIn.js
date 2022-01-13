@@ -27,8 +27,8 @@ function SignIn(props) {
     event.preventDefault();
 
     const { setUser } = props;
-
-    signIn(form)
+    const smallerForm = {username:username,password:password}
+    signIn(smallerForm)
       .then((user) => {
         setUser(user);
       })
