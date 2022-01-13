@@ -28,6 +28,9 @@ align-items: center;
   width: 100%;
   margin-bottom: 10px;
 }
+.signin {
+  width: 90%;
+}
 
 .danger {
   background: #e57373;
