@@ -27,7 +27,8 @@ function Blog(props) {
     <BlogHeader user={user}/>
     <h1>Blog</h1>
     <div className="blog-content">
-      <em>{posts.length} comments</em>
+      {posts.length === 1 ? <p><em>1 comment</em></p>: <em>{posts.length} comments</em>}
+     
       <div>
         {user ? <AddPost user={user} /> : <Link to="sign-in"><textarea placeholder="Add a comment..." /></Link>}
       </div>
