@@ -2,21 +2,18 @@
 
 body {
   background-color: black;
-  /* color: #a0ebf9f9; */
   color: white;
   font-family: 'Staatliches', cursive;
   font-size: 20px;
   margin: 0px;
 }
 a {
-  /* color: #a0ebf9f9; */
   color: white;
   text-decoration: none;
 }
 button {
   min-height: 40px;
   font-family: 'Staatliches', cursive;
-  /* background-color: #a0ebf9f9; */
   font-size: 110%;
 }
 .app {
