@@ -67,7 +67,7 @@ function MusicMaker(props) {
   else {
     return (<div>
       <div className="intro">
-      <div>
+      <div className="intro-text">
           <h1>Ready to make music?</h1>
           <p>Your complete online workstation for producing music</p>
       <button onClick={() => { if (!startButtonClicked) { startSequencer() }; setStartButtonClicked(true);}}>Click to Enter</button>
@@ -88,7 +88,8 @@ function MusicMaker(props) {
         <div className="intro-c-text"><h2>The Online Daw requires no prior musical experience or background. If you have ever dreamed of making music, but never had the chance, this app is for you.</h2></div>
         <a href="#ready"><button><p>Get started</p></button></a>
       </div>
-      <h1 id="contact-h1">Get in contact with me: </h1>
+      <div className="intro-d"> <h1 id="contact-h1">Get in contact with me: </h1></div>
+     
       
     </div>)
   }

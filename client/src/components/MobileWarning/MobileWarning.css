@@ -1,6 +1,11 @@
 .warning {
   text-align: center;
   padding: 20px;
+  width: 100%;
+  display:flex;
+  flex-direction: column;
+  flex-wrap: center;
+  align-items: center;
 }
 .warning img {
   width: 80%;

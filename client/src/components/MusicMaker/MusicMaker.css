@@ -25,7 +25,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 499px;
+  width: 100%;
 }
 .home h1 {
   background-color: black;
@@ -50,6 +50,11 @@
 
 .intro img {
   max-width: 700px;
+  width: 50%;
+}
+.intro-text {
+  max-width: 500px;
+  width: 40%;
 }
 .intro-b {
   display: flex;
@@ -108,9 +113,10 @@
   .home-pics {
     display: none;
   }
+
 }
 @media only screen and (max-width: 500px) {
-  .musicmaker, .home {
+  .musicmaker, .intro, .intro-b,.intro-c,.intro-d {
     display: none;
   }
 }
