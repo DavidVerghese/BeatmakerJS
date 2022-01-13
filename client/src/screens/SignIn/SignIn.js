@@ -2,12 +2,12 @@ import './SignIn.css';
 import { signIn } from "../../services/users";
 import React, { useState } from "react";
 import { useHistory, Link } from "react-router-dom";
-import Header from '../../components/Header/Header';
+import AuthenticationHeader from "../../components/AuthenticationHeader/AuthenticationHeader"
 function SignIn(props) {
 
   
   const history = useHistory();
-
+  const { siteUser } = props;
   const [form, setForm] = useState({
     username: "",
     password: "",
@@ -64,7 +64,7 @@ function SignIn(props) {
   const { username, password, user } = form;
 
   return (<div className="signin">
-       <Header user={user}/>
+       <AuthenticationHeader user={siteUser}/>
     <div className="form-container">
         <h1>Sign In</h1>
         <p><i><Link to="sign-up">Sign up</Link> if you do not have an account</i></p>

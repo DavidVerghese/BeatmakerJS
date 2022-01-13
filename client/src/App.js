@@ -22,12 +22,13 @@ function App() {
     }
     fetchUser()
   }, [])
+  console.log(user);
   return (
     <div className="app">
       <Route exact path="/blog"><Blog user={user}/></Route>
       <Route exact path="/"><Home user={user}/></Route>
-      <Route exact path="/sign-up"><SignUp user={user} setUser={setUser}/></Route>
-      <Route exact path="/sign-in"> <SignIn user={user} setUser={setUser} /></Route>
+      <Route exact path="/sign-up"><SignUp siteUser={user} setUser={setUser}/></Route>
+      <Route exact path="/sign-in"> <SignIn siteUser={user} setUser={setUser} /></Route>
       <Route exact path="/sign-out">
           <SignOut setUser={setUser} clearUser={clearUser}/>
       </Route>

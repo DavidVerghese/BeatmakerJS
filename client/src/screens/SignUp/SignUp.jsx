@@ -1,12 +1,14 @@
 import { signUp, signIn } from "../../services/users";
 import { useHistory } from "react-router-dom";
 import React, { useState } from "react";
-import Header from "../../components/Header/Header";
+import AuthenticationHeader from "../../components/AuthenticationHeader/AuthenticationHeader"
+
 import './SignUp.css';
+
 
 function SignUp(props) {
   const history = useHistory();
-
+  const { siteUser } = props;
   const [form, setForm] = useState({
     username: "",
     email: "",
@@ -72,7 +74,7 @@ function SignUp(props) {
   const { email, username, password, passwordConfirmation, user, profile_pic } = form;
 
   return ( <div className="signup-background">
-         <Header user={user}/>
+         <AuthenticationHeader user={siteUser}/>
   <div className="signup-container">
     <h1>Sign Up</h1>
     <form className="signup-form" onSubmit={onSignUp}>
