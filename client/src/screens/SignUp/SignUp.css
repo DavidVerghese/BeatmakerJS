@@ -46,3 +46,9 @@
     padding: 0px;
   }
 }
+
+@media (max-height: 500px) {
+  .signup-container h1{
+    font-size: 100%;
+  }
+}
