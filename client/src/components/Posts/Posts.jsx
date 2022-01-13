@@ -28,7 +28,6 @@ function Posts(props) {
     
     fetchComments();
   }, []);
-
   comments.map((index) => index.post_id === post_id ? commentCount++ : null)
 
     let year = created_at.slice(0, 4);
@@ -36,7 +35,7 @@ function Posts(props) {
     let monthsArray = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
     let month = monthsArray[parseInt(monthNumber - 1)];
     let day = created_at.slice(8, 10);
-    let date = `${month} ${day}, ${year}`
+  let date = `${month} ${day}, ${year}`
   return (<div className="posts">
     <div className="original-post">
       <div className="profile-pic">
@@ -49,12 +48,12 @@ function Posts(props) {
           {siteUser ? <p className="post-interface" onClick={() => { setAddReply(!addReply) }}>Reply</p> : <Link to="/sign-in"><p className="post-interface">Reply</p></Link> }
         
       </div>
-      {addReply ? siteUser ? <AddComment post_id={post_id} user_id={user_id}/>:null : null }
+      {addReply ? siteUser ? <AddComment post_id={post_id} user_id={siteUser.id}/>:null : null }
       <div className="post-interface"><p onClick={() => { setSeeReplies(!seeReplies) }}>{seeReplies ? commentCount > 0 ? commentCount>1 ? `Hide ${commentCount} replies`: `Hide ${commentCount} reply` :null: commentCount > 0 ? commentCount>1 ? `View ${commentCount} replies`: `View ${commentCount} reply` :null}</p>
         </div>
        
         
-       {seeReplies ? comments.map((index, key) => { if (post_id === index.post_id) { return <Comment created_at={index.created_at} key={key} number={commentCount} user_id={index.user_id} content={index.content} profile_pic={index.profile_pic} /> } else { return null } }) : null}
+       {seeReplies ? comments.map((index, key) => { if (post_id === index.post_id) { return <Comment created_at={index.created_at} key={key} number={commentCount} user_id={index.user_id} content={index.content} /> } else { return null } }) : null}
     
     </div>
 
