@@ -22,7 +22,7 @@
 #signup-username,
 #signup-email,
 #signup-password,
-#signup-password-confirmation {
+#signup-password-confirmation, #signup-profile-pic {
   text-align: center;
   margin: 5px 0px;
   padding: 10px 0;
