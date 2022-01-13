@@ -37,3 +37,4 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'jwt'
 gem 'rack-cors'
+gem 'bcrypt-ruby'

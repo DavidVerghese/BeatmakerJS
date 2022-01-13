@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :update, :destroy]
   before_action :authorize_request, except: [:create, :show]
-
+  
 
   # GET /users/1
   def show
@@ -11,7 +11,6 @@ class UsersController < ApplicationController
   # POST /users
   def create
     @user = User.new(user_params)
-
     if @user.save
       @token = encode({id: @user.id})
       render json: {
@@ -25,7 +24,6 @@ class UsersController < ApplicationController
 
   # PATCH/PUT /users/1
   def update
-    puts @user 
     if @user.update(user_params)
       render json: @user.attributes.except("password_digest","email")
     else
