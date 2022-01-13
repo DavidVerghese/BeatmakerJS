@@ -5,7 +5,6 @@ import { verifyUser } from './services/users'
 import { Route } from "react-router-dom";
 import Home from './screens/Home/Home';
 import Blog from './screens/Blog/Blog';
-import AddPost from './components/AddPost/AddPost';
 import MobileWarning from './components/MobileWarning/MobileWarning';
 import SignUp from "./screens/SignUp/SignUp";
 import SignOut from './components/SignOut/SignOut';

@@ -1,7 +1,6 @@
 import './Home.css';
 import MusicMaker  from '../../components/MusicMaker/MusicMaker';
 import Modal from 'react-modal';
-import { Route, Link } from "react-router-dom";
 import Header from '../../components/Header/Header';
 
 Modal.setAppElement('#root');
