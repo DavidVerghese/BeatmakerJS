@@ -20,3 +20,20 @@
   flex-direction: column;
   align-items: center;
 }
+
+@media only screen and (max-width: 500px) {
+  .blog {
+    display: none;
+  }
+}
+@media only screen and (max-height: 500px) {
+  .blog {
+    justify-content: flex-start;
+  }
+  .blog h1 {
+    font-size: 120%;
+  }
+  .blog textarea {
+    margin: 10px;
+  }
+}
