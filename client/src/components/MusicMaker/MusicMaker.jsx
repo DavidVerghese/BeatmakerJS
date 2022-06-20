@@ -84,7 +84,7 @@ function MusicMaker() {
         <img alt="accordionist" src="https://images.unsplash.com/photo-1593122444709-8f312cc22e88?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" />
       </div>
       <div className="intro-c">
-        <div className="intro-c-text"><h2>The Online Daw requires no prior musical experience or background. If you have ever dreamed of making music, but never had the chance, this app is for you.</h2></div>
+        <div className="intro-c-text"><h2>Box Beats requires no prior musical experience or background. If you have ever dreamed of making music, but never had the chance, this app is for you.</h2></div>
         <a href="#ready"><button><p>Get started</p></button></a>
       </div>
       <div className="intro-d"> <h1 id="contact-h1">Get in contact with me: </h1></div>
