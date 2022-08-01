@@ -1,0 +1,13 @@
+
+body {
+  background-color: black;
+  color: #fdfffe;
+}
+a {
+  color: #fdfffe;
+}
+.table {
+  color: #0a3f24;
+}
+
+@import 'bootstrap/dist/css/bootstrap.min.css'

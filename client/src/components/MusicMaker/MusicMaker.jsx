@@ -32,6 +32,7 @@ import leadF4File from '../../sounds/pipa/pipa-f4.wav';
 import leadE4File from '../../sounds/pipa/pipa-e4.wav';
 import leadD4File from '../../sounds/pipa/pipa-d4.wav';
 import leadC4File from '../../sounds/pipa/pipa-c4.wav';
+import Carousel from 'react-bootstrap/Carousel';
 
 Modal.setAppElement('#root');
 
@@ -65,7 +66,12 @@ function MusicMaker() {
   }
   else {
     return (<div>
+      
+
       <div className="intro">
+
+      
+        
       <div className="intro-text">
           <h1>Ready to make music?</h1>
           <p>Your complete online workstation for producing music</p>
